@@ -1,0 +1,603 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/mag"))()
+local Main = Library.Category("Camlock", "Main Code", Color3.fromRGB(0, 204, 204))
+Main:Section("RxcePH")
+Main:Toggle(
+    "Enable",
+    function(State) loadstring(game:HttpGet("https://raw.githubusercontent.com/A1rxgdhevve/A1rxgdhevve/main/GwapoRxcePH"))()
+        if State == true then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        else
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(18)
+        end
+    end
+)
+Main:Box(
+    "prediction ",
+    "0.144627",
+    function(text)
+        print(text)
+    end
+)
+Main:Dropdown(
+    "Aim Type",
+    {"Look (Legit)", "BLANT", ""},
+    function(update)
+        print(update)
+    end
+)
+
+Main:Slider(
+    "X Offset",
+    0,
+    0.144627,
+    true,
+    function(numbers)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = numbers
+    end
+)
+
+Main:Slider(
+    "Y Offset",
+    0,
+    0.144627,
+    true,
+    function(numbers)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = numbers
+    end
+)
+
+Main:Toggle(
+    "0Delay",
+function(State) local mt = getrawmetatable(game)
+local backup
+backup = hookfunction(mt.__newindex, newcclosure(function(self, key, value)
+if key == "WalkSpeed" and value < 16 then
+value = 16
+end
+return backup(self, key, value)
+end))
+        if State == true then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        else
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(18)
+        end
+    end
+)
+
+Main:Toggle(
+    "Op Mobile silent",
+    function(State) getgenv().Silent = {
+    Settings = {
+        Enabled = true,
+        AimPart = "UpperTorso",
+        Prediction = 0.1433,
+        WallCheck = true,
+        Visualize = true,
+        AutoPrediction = true,
+    },
+    FOV = {
+        Enabled = true,
+        Size = 30,
+        Filled = false,
+        Thickness = 0.66,
+        Transparency = 0.9,
+        Color = Color3.fromRGB(255,255,255),
+    },
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CyberPlaysYT/Aura-x-update/main/Aura%20x%20updated", true))()
+    
+    
+        if State == true then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        else
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(18)
+        end
+    end
+)
+
+local Main = Library.Category("Visuals", "Main Code", Color3.fromRGB(0, 204, 204))
+
+Main:Toggle(
+    "RightClick",
+ function(State) loadstring(game:HttpGet("https://raw.githubusercontent.com/DHBCommunity/DHBOfficialScript/main/RightClick"))()
+        if State == true then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        else
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(18)
+        end
+    end
+)
+
+Main:Toggle(
+    "FateEsp",
+    function(State) loadstring(game:HttpGet('https://raw.githubusercontent.com/fatesc/fates-esp/main/main.lua'))()
+        if State == true then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        else
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(18)
+        end
+    end
+)
+
+Main:Toggle(
+    "KirbsAntilock",
+    function(State) loadstring(game:HttpGet('https://raw.githubusercontent.com/wenny69420/KirbswareScripts/main/MobileV3'))()
+        if State == true then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        else
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(18)
+        end
+    end
+)
+
+Main:Toggle(
+    "TrashTalk",
+    function(State) --[[
+ENJOY YALL SKIDDERS. THIS NIGGA WAS MADE BY @_skidyo.mum ON DISCORD
+]]--
+local words = {
+    'ur bad',
+    'SxrpOnTop?',
+    'sit',
+    'unknown',
+    'ez',
+    'tapped',
+    'brokie',
+    'fly high',
+    'ur aim is horrid',
+    'get better',
+    'nn',
+    'trash',
+    'nice aim',
+    'pooron',
+    'son',
+    'grandma got more skills than you',
+    'calculated',
+    'calm down',
+    'tryhard',
+    'outplayed',
+    'sweat',
+    'tried',
+    'get rekt',
+    'ez clap',
+    'try harder',
+    'nice try',
+}
+
+local player = game.Players.LocalPlayer
+local event = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
+
+local pluh = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local negar = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+
+pluh.Name = "pluh"
+pluh.Parent = game.CoreGui
+pluh.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local UICorner_2 = Instance.new("UICorner")
+UICorner_2.CornerRadius = UDim.new(0, 10)
+UICorner_2.Parent = negar
+
+-- goody ahh button
+negar.Parent = pluh
+negar.Name = "negar"
+negar.BorderSizePixel = 0
+negar.Active = true
+negar.Draggable = true
+negar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+negar.BackgroundTransparency = 0.0
+negar.BorderColor3 = Color3.fromRGB(255, 255, 255)
+negar.Position = UDim2.new(0.133798108, 0, 0.20107238, 0)
+negar.Size = UDim2.new(0, 90, 0, 30)
+negar.Font = Enum.Font.SourceSansSemibold
+negar.Text = "Talk"
+negar.TextColor3 = Color3.fromRGB(255, 255, 255)
+negar.TextScaled = true
+negar.TextSize = 14.000
+negar.TextWrapped = true
+
+negar.MouseButton1Click:Connect(function()
+    event:FireServer(words[math.random(#words)], "All")
+end)
+        if State == true then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        else
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(18)
+        end
+    end
+)
+
+Main:Toggle(
+    "Esp2.0",
+ function(State) getgenv().esp = {
+
+    AutoStep = true, -- automatically updates the esp, you can disable this and use Player:Step() if you want to manually update them
+    CharacterSize = Vector3.new(4, 5.75, 1.5),
+    CharacterOffset = CFrame.new(0, -0.25, 0),
+    UseBoundingBox = false, -- will use bounding box instead of size preset for dynamic box
+
+    PriorityColor = Color3.new(1,0.25,0.25),
+
+    BoxEnabled = true,
+    BoxCorners = true,
+    BoxDynamic = false,
+    BoxStaticXFactor = 1.3,
+    BoxStaticYFactor = 2.1,
+    BoxColor = Color3.fromRGB(255, 255, 255),
+    
+    SkeletonEnabled = true,
+    SkeletonColor = Color3.fromRGB(255, 255, 255),
+    SkeletonMaxDistance = 300,
+
+    ChamsEnabled = true,
+    ChamsInnerColor = Color3.fromRGB(102, 60, 153),
+    ChamsOuterColor = Color3.fromRGB(0, 0, 0),
+    ChamsInnerTransparency = 0.5,
+    ChamsOuterTransparency = 0.2,
+
+
+    TextEnabled = true,
+    TextColor = Color3.fromRGB(255, 255, 255),
+    TextLayout = {
+        ['nametag']  = { enabled = true, position = 'top', order = 1 },
+        ['name']     = { enabled = true, position = 'top', order = 2 },
+        ['health']   = { enabled = true, position = 'left', order = 1, bar = 'health' },
+        ['armor']    = { enabled = true, position = 'left', order = 2, bar = 'armor' },
+        ['tool']     = { enabled = true, position = 'bottom', suffix = '', prefix = '', order = 1 },
+        ['distance'] = { enabled = false, position = 'bottom', suffix = 'm', order = 2 },
+    },
+
+    BarLayout = {
+        ['health'] = { enabled = true, position = 'left', order = 1, color_empty = Color3.fromRGB(176, 84, 84), color_full = Color3.fromRGB(140, 250, 140) },
+        ['armor']  = { enabled = true, position = 'left', order = 2, color_empty = Color3.fromRGB(58, 58, 97), color_full = Color3.fromRGB(72, 72, 250) }
+    }
+    
+}
+
+-- // variables
+local runservice = game:GetService('RunService')
+local camera = workspace.CurrentCamera
+local world_to_viewport = camera.WorldToViewportPoint
+local inf = math.huge
+
+local skeleton_connections = {
+    {'UpperTorso', 'Head', Vector3.new(0,0.4,0), Vector3.new(0,-0.2,0)},
+    {'UpperTorso', 'LowerTorso', Vector3.new(0,0.4,0)},
+
+    {'UpperTorso', 'RightUpperArm', Vector3.new(0,0.4,0)},
+    {'UpperTorso', 'LeftUpperArm', Vector3.new(0,0.4,0)},
+    {'RightUpperArm', 'RightHand'},
+    {'LeftUpperArm', 'LeftHand'},
+
+    {'LowerTorso', 'LeftUpperLeg'},
+    {'LeftUpperLeg', 'LeftFoot'},
+    {'LowerTorso', 'RightUpperLeg'},
+    {'RightUpperLeg', 'RightFoot'}
+}
+
+function vector2_floor(vector2)
+    return Vector2.new(math.floor(vector2.X), math.floor(vector2.Y))
+end
+
+function cframe_to_viewport(cframe, floor)
+    local position, visible = world_to_viewport(camera, cframe * (cframe - cframe.p):ToObjectSpace(camera.CFrame - camera.CFrame.p).p)
+    if floor then
+        position = vector2_floor(position)
+    end
+    return position, visible
+end
+
+-- // drawing
+local old; old = hookfunction(Drawing.new, function(class, properties)
+    local drawing = old(class)
+    for i,v in next, properties or {} do
+        drawing[i] = v
+    end
+    return drawing
+end)
+
+-- // player
+getgenv().players = {}
+local player = {}
+player.__index = player
+
+function player:Check()
+    
+    local character = self.instance.Character
+    local rootpart = character and character:FindFirstChild('HumanoidRootPart')
+    local torso = character and character:FindFirstChild('UpperTorso')
+    local humanoid = rootpart and character:FindFirstChild('Humanoid')
+    local bodyeffects = character and character:FindFirstChild('BodyEffects')
+    local armor = bodyeffects and bodyeffects:FindFirstChild('Armor')
+
+    if not humanoid or 0 >= humanoid.Health then
+        return false
+    end
+
+    local screen_position, screen_visible = cframe_to_viewport(torso.CFrame * esp.CharacterOffset, true)
+
+    if not screen_visible then
+        return false
+    end
+
+    return true, {
+        character = character,
+        rootpart = rootpart,
+        humanoid = humanoid,
+        bodyeffects = bodyeffects,
+        armor = armor,
+        position = screen_position,
+        cframe = rootpart.CFrame * esp.CharacterOffset,
+        health = humanoid.Health,
+        maxhealth = humanoid.MaxHealth,
+        healthfactor = humanoid.Health / humanoid.MaxHealth,
+        armorfactor = armor.Value / 200,
+        distance = (rootpart.CFrame.p - camera.CFrame.p).magnitude
+    }
+    
+end
+
+function player:Step(delta)
+
+    local check_pass, check_data = self:Check()
+
+    self:SetVisible(false)
+
+    if not check_pass then
+        return
+    else
+        self.visible = true
+    end
+    
+    local size = self:GetBoxSize(check_data.position, check_data.cframe)
+    local position = vector2_floor(check_data.position - size / 2)
+    local color = self.priority and esp.PriorityColor
+    local box_drawings = self.drawings.box
+
+    if esp.BoxEnabled and esp.BoxCorners then
+
+        local corner_size = size.X / 3
+
+        box_drawings[9].Position = position
+        box_drawings[10].Position = position + Vector2.new(size.X - 1, 0)
+        box_drawings[11].Position = position + Vector2.new(0, size.Y - corner_size)
+        box_drawings[12].Position = position + Vector2.new(size.X - 1, size.Y - corner_size)
+
+        box_drawings[13].Position = position
+        box_drawings[14].Position = position + Vector2.new(size.X - corner_size, 0)
+        box_drawings[15].Position = position + Vector2.new(0, size.Y - 1)
+        box_drawings[16].Position = position + Vector2.new(size.X - corner_size, size.Y - 1)
+
+        for i = 1, 8 do
+            local outline = box_drawings[i]
+            local inline = box_drawings[i + 8]
+
+            inline.Visible = true
+            outline.Visible = true
+            inline.Filled = true
+            outline.Filled = true
+            inline.Color = color or (self.useboxcolor and self.boxcolor) or esp.BoxColor
+
+            outline.Position = inline.Position - Vector2.new(1, 1)
+            
+            if i > 4 then
+                inline.Size = Vector2.new(corner_size, 1)
+                outline.Size = Vector2.new(corner_size + 2, 3)
+            else
+                inline.Size = Vector2.new(1, corner_size)
+                outline.Size = Vector2.new(3, corner_size + 2)
+            end
+        end
+
+
+
+    elseif esp.BoxEnabled then
+        local outline = box_drawings[1]
+        local inline = box_drawings[9]
+
+        outline.Visible = true
+        outline.Size = size
+        outline.Position = position
+
+        inline.Visible = true
+        inline.Size = size
+        inline.Position = position
+        inline.Color = color or (self.useboxcolor and self.boxcolor) or esp.BoxColor
+    end
+    
+    self.highlight.Enabled = esp.ChamsEnabled
+    self.highlight.FillColor = (self.usehighlightcolor and self.highlightcolor) or esp.ChamsInnerColor
+    self.highlight.FillTransparency = esp.ChamsInnerTransparency
+    self.highlight.OutlineColor = (self.usehighlightcolor and self.outlinehighlightcolor) or esp.ChamsOuterColor
+    self.highlight.OutlineTransparency = esp.ChamsOuterTransparency
+    self.highlight.Parent = check_data.character
+    self.highlight.Adornee = check_data.character
+
+    local bar_data = self:GetBarData(check_data)
+    local bar_positions = { top = 0, bottom = 0, left = 0, right = 0 }
+
+    for idx, data in next, self.drawings.bar do
+        local flag = data[1]
+        local layout = data[2]
+        local outline = data[3]
+        local inline = data[4]
+        local data = bar_data[flag]
+
+        if not layout.enabled or data.enabled == false then
+            continue
+        end
+
+        local progress = data.progress or 0
+        local vertical = layout.position == 'left' or layout.position == 'right'
+
+        outline.Visible = true
+        inline.Visible = true
+
+        outline.Size = vertical and Vector2.new(3, size.Y + 2) or Vector2.new(size.X + 2, 3)
+        outline.Position = position + (
+            layout.position == 'top' and Vector2.new(-1, -(5 + bar_positions.top)) or
+            layout.position == 'bottom' and Vector2.new(-1, size.Y + 2 + bar_positions.bottom) or
+            layout.position == 'left' and Vector2.new(-5-bar_positions.left, -1) or
+            layout.position == 'right' and Vector2.new(size.X + 2 + bar_positions.right, -1)
+        )
+
+        inline.Color = layout.color_empty:lerp(layout.color_full, progress)
+        inline.Size = vertical and Vector2.new(1, progress * size.Y) or Vector2.new(progress * size.X, 1)
+
+        if vertical then
+            inline.Position = outline.Position + Vector2.new(1,1 + size.Y - progress * size.Y)
+        else
+            inline.Position = outline.Position + Vector2.new(size.X - progress * size.X ,1)
+        end
+
+        bar_positions[layout.position] += 4
+
+    end
+
+    if esp.TextEnabled then
+        local text_data = self:GetTextData(check_data)
+        local text_positions = { top = bar_positions.top, bottom = bar_positions.bottom, left = 0, right = 0 }
+
+        for idx, data in next, self.drawings.text do
+            local flag = data[1]
+            local layout = data[2]
+            local drawing = data[3]
+            local data = text_data[flag]
+
+            if not layout.enabled or data.enabled == false then
+                continue
+            end
+
+            drawing.Visible = true
+            drawing.Text = (layout.prefix or '') .. (data.text or '') .. (layout.suffix or '')
+            drawing.Color = data.color or color or layout.color or esp.TextColor
+
+            if layout.bar then
+                drawing.Position = position + (
+                    layout.position == 'left' and Vector2.new(-(bar_positions.left + drawing.TextBounds.X + 2), size.Y - bar_data[layout.bar].progress * size.Y - 3) or
+                    layout.position == 'right' and Vector2.new(size.X + bar_positions.right + 2, size.Y - bar_data[layout.bar].progress * size.Y -3)               
+                )
+            else
+                drawing.Position = position + (
+                    layout.position == 'top' and Vector2.new(size.X / 2, -3 - (text_positions.top + 14)) or
+                    layout.position == 'bottom' and Vector2.new(size.X / 2, size.Y + text_positions.bottom + 2) or
+                    layout.position == 'left' and Vector2.new(-(bar_positions.left + drawing.TextBounds.X + 2), text_positions.left - 3) or
+                    layout.position == 'right' and Vector2.new(size.X + bar_positions.right + 2, size.Y + text_positions.right - 3)               
+                )
+    
+                text_positions[layout.position] += 14
+            end
+
+        end 
+    end
+
+    if esp.SkeletonEnabled and esp.SkeletonMaxDistance > check_data.distance then
+
+        local cache = {}
+
+        for idx, connection_data in next, skeleton_connections do
+            local drawing = self.drawings.skeleton[idx]
+            local part_a = check_data.character:FindFirstChild(connection_data[1])
+            local part_b = check_data.character:FindFirstChild(connection_data[2])
+
+            if part_a and part_b then
+                local screen_position_a = cache[part_a] or cframe_to_viewport(part_a.CFrame + (connection_data[3] or Vector3.new()), true)
+                local screen_position_b = cache[part_b] or cframe_to_viewport(part_b.CFrame + (connection_data[4] or Vector3.new()), true)
+
+                cache[part_a] = screen_position_a
+                cache[part_b] = screen_position_b
+
+                drawing.Visible = true
+                drawing.Color = color or esp.SkeletonColor
+                drawing.From = screen_position_a
+                drawing.To = screen_position_b
+            end
+        end
+    end
+
+
+end
+
+function player:GetTextData(data)
+    local tool = data.character:FindFirstChildOfClass('Tool')
+    return {
+        ['nametag']  = { text = self.nametag_text, enabled = self.nametag_enabled, color = self.nametag_color },
+        ['name']     = { text = self.instance.DisplayName },
+        ['armor']    = { text = tostring(math.floor(data.armor.Value)), color = esp.BarLayout.armor.color_empty:lerp(esp.BarLayout.armor.color_full, data.armorfactor)},
+        ['health']   = { text = tostring(math.floor(data.health)), color = esp.BarLayout.health.color_empty:lerp(esp.BarLayout.health.color_full, data.healthfactor) },
+        ['distance'] = { text = tostring(math.floor(data.distance)) },
+        ['tool']     = { text = tool and tool.Name, enabled = tool ~= nil }
+    }
+end
+
+function player:GetBarData(data) -- progress should be a number 0-1, you can get this by doing value / maxvalue aka armor / maxarmor
+    return {
+        ['health'] = { progress = data.healthfactor },
+        ['armor'] = { progress = data.armorfactor }
+    }
+end
+
+function player:GetBoxSize(position, cframe)
+    if esp.BoxDynamic then
+        local size = esp.CharacterSize
+        
+        if esp.UseBoundingBox then
+            _, size = self.instance.Character:GetBoundingBox()
+        end
+
+        local x = cframe_to_viewport(cframe * CFrame.new(size.X, 0, 0))
+        local y = cframe_to_viewport(cframe * CFrame.new(0, size.Y, 0))
+        local z = cframe_to_viewport(cframe * CFrame.new(0, 0, size.Z))
+
+        local SizeX = math.max(math.abs(position.X - x.X), math.abs(position.X - z.X))
+        local SizeY = math.max(math.abs(position.Y - y.Y), math.abs(position.Y - x.Y))
+
+        return Vector2.new(math.clamp(math.floor(SizeX), 3, inf), math.clamp(math.floor(SizeY), 6, inf))
+    else
+        local distance = (camera.CFrame.p - cframe.p).magnitude
+        local factor = 1 / ((distance / 3) * math.tan(math.rad(camera.FieldOfView / 2)) * 2) * 1000
+        return Vector2.new(math.clamp(math.floor(factor * esp.BoxStaticXFactor), 3, inf), math.clamp(math.floor(factor * esp.BoxStaticYFactor), 6, inf))
+    end
+end
+
+function player:SetPriority(bool)
+    self.priority = bool
+end
+
+function player:GetPriority()
+    return self.priority
+end
+
+function player:SetBoxColorEnabled(bool)
+    self.useboxcolor = bool
+end
+
+function player:SetBoxColor(color)
+    self.boxcolor = color
+end
+
+function player:SetHighlightColorEnabled(bool)
+    self.usehighlightcolor = bool
+end
+
+function player:SetHighlightColor(color, color2)
+    self.highlightcolor = color
+    self.outlinehighlightcolor = color2
+end
+
+function player:SetNametagText(str)
+    self.nametag_text = str
+end
+
+function player:SetNametagEnabled(bool)
+    self.nametag_enabled = bool
+end
+
+function player:SetNametagColor(color)
+    self.nametag_color = color
+end
+
+function pl
