@@ -1,0 +1,197 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/mag"))()
+local Main = Library.Category("Camlock", "Main Code", Color3.fromRGB(0, 204, 204))
+Main:Section("RxcePH")
+Main:Toggle(
+    "Enable",
+    function(State) loadstring(game:HttpGet("https://raw.githubusercontent.com/A1rxgdhevve/A1rxgdhevve/main/GwapoRxcePH"))()
+        if State == true then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        else
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(18)
+        end
+    end
+)
+Main:Box(
+    "prediction ",
+    "0.144627",
+    function(text)
+        print(text)
+    end
+)
+Main:Dropdown(
+    "Aim Type",
+    {"Look (Legit)", "BLANT", ""},
+    function(update)
+        print(update)
+    end
+)
+
+Main:Slider(
+    "X Offset",
+    0,
+    0.144627,
+    true,
+    function(numbers)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = numbers
+    end
+)
+
+Main:Toggle(
+    "Shiftlock",
+    function(state) loadstring(game:HttpGet('https://raw.githubusercontent.com/Unknownproootest/Permanent-Shift-Lock-Alt/alt/PermShiftlockAlt'))()
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = numbers
+    end
+)
+
+Main:Toggle(
+    "PluhSetGen",
+    function(state) loadstring(game:HttpGet("https://raw.githubusercontent.com/acsun124/pluh-s-properties/main/set_gen-pluh.txt"))()
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = numbers
+    end
+)
+
+Main:Toggle(
+    "Op Mobile silent",
+    function(State) getgenv().Silent = {
+    Settings = {
+        Enabled = true,
+        AimPart = "UpperTorso",
+        Prediction = 0.1433,
+        WallCheck = true,
+        Visualize = true,
+        AutoPrediction = true,
+    },
+    FOV = {
+        Enabled = true,
+        Size = 30,
+        Filled = false,
+        Thickness = 0.66,
+        Transparency = 0.9,
+        Color = Color3.fromRGB(255,255,255),
+    },
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CyberPlaysYT/Aura-x-update/main/Aura%20x%20updated", true))()
+    
+    
+        if State == true then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        else
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(18)
+        end
+    end
+)
+
+local Main = Library.Category("Visuals", "Main Code", Color3.fromRGB(0, 204, 204))
+
+Main:Toggle(
+    "RightClick",
+ function(State) loadstring(game:HttpGet("https://raw.githubusercontent.com/DHBCommunity/DHBOfficialScript/main/RightClick"))()
+        if State == true then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        else
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(18)
+        end
+    end
+)
+
+Main:Toggle(
+    "Rkzkeev2",
+    function(State) loadstring(game:HttpGet('https://raw.githubusercontent.com/Rkzkeescript/Rkzkeev2-Camlock-silent/main/Rkzkee%20gui%20v2%20update'))()
+        if State == true then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        else
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(18)
+        end
+    end
+)
+
+Main:Toggle(
+    "KirbsAntilock",
+    function(State) loadstring(game:HttpGet('https://raw.githubusercontent.com/wenny69420/KirbswareScripts/main/MobileV3'))()
+        if State == true then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        else
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(18)
+        end
+    end
+)
+
+Main:Toggle(
+    "TrashTalk",
+    function(State) --[[
+ENJOY YALL SKIDDERS. THIS NIGGA WAS MADE BY @_skidyo.mum ON DISCORD
+]]--
+local words = {
+    'ur bad',
+    'RxcePHOnTop?',
+    'sit',
+    'unknown',
+    'ez',
+    'tapped',
+    'brokie',
+    'fly high',
+    'ur aim is horrid',
+    'get better',
+    'nn',
+    'trash',
+    'nice aim',
+    'pooron',
+    'son',
+    'grandma got more skills than you',
+    'calculated',
+    'calm down',
+    'tryhard',
+    'outplayed',
+    'sweat',
+    'tried',
+    'get rekt',
+    'ez clap',
+    'try harder',
+    'nice try',
+}
+
+local player = game.Players.LocalPlayer
+local event = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
+
+local pluh = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local negar = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+
+pluh.Name = "pluh"
+pluh.Parent = game.CoreGui
+pluh.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+local UICorner_2 = Instance.new("UICorner")
+UICorner_2.CornerRadius = UDim.new(0, 10)
+UICorner_2.Parent = negar
+
+-- goody ahh button
+negar.Parent = pluh
+negar.Name = "negar"
+negar.BorderSizePixel = 0
+negar.Active = true
+negar.Draggable = true
+negar.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+negar.BackgroundTransparency = 0.0
+negar.BorderColor3 = Color3.fromRGB(255, 255, 255)
+negar.Position = UDim2.new(0.133798108, 0, 0.20107238, 0)
+negar.Size = UDim2.new(0, 90, 0, 30)
+negar.Font = Enum.Font.SourceSansSemibold
+negar.Text = "Talk"
+negar.TextColor3 = Color3.fromRGB(255, 255, 255)
+negar.TextScaled = true
+negar.TextSize = 14.000
+negar.TextWrapped = true
+
+negar.MouseButton1Click:Connect(function()
+    event:FireServer(words[math.random(#words)], "All")
+end)
+        if State == true then
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+        else
+            game.Players.LocalPlayer.Character.Humanoid:ChangeState(18)
+        end
+    end
+)
